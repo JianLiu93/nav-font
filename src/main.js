@@ -107,15 +107,17 @@ $.extend ({
 		.on('click', function() {
 			let input = window.prompt('请输入您需要改变该网站的序号，数字1~99');
 			let matchInp = (!input) ? null : (input.match(/\b\d{1,2}\b/g));
-			if(!!matchInp && (input-1) < hashMap.length) {
+			if(!!matchInp) {
 				let index = $(this).parent().parent().index();
 				input -= 1;   // 注意序号-1
 				if(input < index) {
 					hashMap.splice(input, 0, hashMap[index]);
 					hashMap.splice(index+1, 1);
-				} else {
-					console.log('>');
+				} else if(input > index) {
 					hashMap.splice(input+1, 0, hashMap[index]);
+					hashMap.splice(index, 1);
+				} else if(input >= hashMap.length) {
+					hashMap.splice(hashMap.length, 0, hashMap[index]);
 					hashMap.splice(index, 1);
 				}
 				setStorage(hashMap);
