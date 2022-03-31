@@ -1,0 +1,180 @@
+/* CSS reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+ul, ol {
+	list-style: none;
+}
+
+button,
+input {
+	font: inherit;
+}
+
+img {
+	max-width: 100%;
+}
+/* CSS style*/
+body {
+	background: #eee;
+	caret-color: transparent;
+}
+
+.gloHeader {
+	width: 100%;
+	margin: 20px;
+}
+.gloHeader .searchForm {
+	display: flex;
+	justify-content: space-between;
+	max-width: 800px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+@media (min-width: 480px) {
+	.gloHeader {
+		margin: 60px 20px 100px 20px;
+	}
+	.gloHeader .searchForm {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.gloHeader input {
+	margin: 20px 20px 20px 0;
+	width: 100%;
+	height: 50px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	caret-color: #000;
+}
+.gloHeader button {
+	white-space: nowrap;
+	margin: 20px 0;
+	padding: 0 20px;
+	border: none;
+	border-radius: 4px;
+	background: #1e80ff;
+	color: #fff;
+	font-size: 20px;
+}
+.gloMain {
+	max-width: 1000px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.siteList {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	font-size: 16px;
+}
+.siteList li.site {
+	width: 160px;
+	margin-bottom: 40px;
+	padding-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+@media (min-width: 480px) {
+	.gloMain {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.siteList {
+		justify-content: flex-start;
+		margin-left: -50px;
+	}
+	.siteList li.site {
+		margin-left: 50px;
+	}
+}
+
+.siteList .site a {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.siteList .site .siteName {
+	width: 100%;
+	text-align: center;
+}
+.siteList .site .link {
+	width: 100%;
+	text-align: center;
+	font-size: 14px;
+}
+.siteList .site .logo {
+	margin: 4px 0;
+	width: 64px;
+	height: 64px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 60px;
+}
+
+.siteList .site .btn {
+	width: 100%;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.siteList .site .btn>button {
+	padding: 0 4px;
+	height: 20px;
+	font-size: 16px;
+	line-height: 20px;
+	border: none;
+	background: transparent;
+}
+.siteList .site .logo img {
+	max-width: 100%;
+	max-height: 100%;
+}
+.siteList .last {
+	cursor: pointer;
+}
+.siteList .addButton {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.siteList .addButton .icon {
+	width: 64px;
+	height: 64px;
+	margin: 20px 0;
+}
+.siteList .addButton .iconfont {
+	font-size: 64px;
+}
+
+.siteList .site a div {
+	white-space: nowrap; /*内容溢出宽度不换行*/
+	overflow: hidden; /*溢出部分隐藏*/
+	text-overflow: ellipsis; /*溢出内容替换为省略号*/
+}
+
+/*# sourceMappingURL=style.308c3322.css.map */
